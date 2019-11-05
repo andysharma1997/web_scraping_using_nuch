@@ -38,5 +38,16 @@ Setup JAVA_HOME if you are seeing JAVA_HOME not set
 export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")
 
 #  Crawl your first website
+1.Customize your crawl properties, where at a minimum, you provide a name for your crawler for external servers to recognize
+
+2.Set a seed list of URLs to crawl
+
+# Customize your crawl properties
+add the following configurations to the  conf/nutch-site.xml file
+
+```<property>
+ <name>http.agent.name</name>
+ <value>My Nutch Spider</value>
+</property>```
 
 

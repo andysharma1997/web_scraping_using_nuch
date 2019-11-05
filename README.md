@@ -61,4 +61,4 @@ mkdir -p urls
 cd urls
 vi seed.txt and add the 
 ```
-
+continue tommorw https://cwiki.apache.org/confluence/display/nutch/NutchTutorial

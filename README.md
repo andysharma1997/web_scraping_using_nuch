@@ -42,7 +42,7 @@ export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")
 
 2.Set a seed list of URLs to crawl
 
-# Customize your crawl properties
+## Customize your crawl properties
 add the following configurations to the  conf/nutch-site.xml file
 ```
 <property>
@@ -51,4 +51,14 @@ add the following configurations to the  conf/nutch-site.xml file
 </property>
 ```
 ## Create a URL seed list
+1.A URL seed list includes a list of websites, one-per-line, which nutch will look to crawl
+
+2.The file conf/regex-urlfilter.txt will provide Regular Expressions that allow nutch to filter and narrow the types of web resources to crawl and download
+
+### Create a URL seed list
+```
+mkdir -p urls
+cd urls
+vi seed.txt and add the 
+```
 

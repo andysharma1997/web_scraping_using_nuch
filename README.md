@@ -50,4 +50,5 @@ add the following configurations to the  conf/nutch-site.xml file
  <value>My Nutch Spider</value>
 </property>
 ```
+## Create a URL seed list
 

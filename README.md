@@ -44,10 +44,10 @@ export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")
 
 # Customize your crawl properties
 add the following configurations to the  conf/nutch-site.xml file
-
-```<property>
+```
+<property>
  <name>http.agent.name</name>
  <value>My Nutch Spider</value>
-</property>```
-
+</property>
+```
 

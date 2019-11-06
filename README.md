@@ -10,23 +10,17 @@ export this path to environment usig export NUTCH_RUNTIME_HOME="path/to/apache-n
 cd apache-nutch-1.X
 ./bin/nutch must return 
 
+```
 Usage: nutch COMMAND where command is one of:
-
 readdb            read / dump crawl db
-
 mergedb           merge crawldb-s, with optional filtering
-
 readlinkdb        read / dump link db
-
 inject            inject new urls into the database
-
 generate          generate new segments to fetch from crawl db
-
 freegen           generate new segments to fetch from text files
-
 fetch             fetch a segment's pages
-
 ...
+```
 
 #  Some troubleshooting tips:
 Run the following command if you are seeing "Permission denied":
@@ -59,6 +53,18 @@ add the following configurations to the  conf/nutch-site.xml file
 ```
 mkdir -p urls
 cd urls
-vi seed.txt and add the 
+vi seed.txt and add the required url to be searched i'll recomend to just add the base url then rest of the urls in the site can be fetched
 ```
-continue tommorw https://cwiki.apache.org/confluence/display/nutch/NutchTutorial
+` Configure Regular Expression Filters
+Edit the file conf/regex-urlfilter.txt and replace
+```
++^https?://([a-z0-9-]+\.)*xyz\.org/
+```
+add this to the end of file
+
+## Seeding the crawldb with a list of URLs
+Bootstrapping from an initial seed list.
+```
+bin/nutch inject crawl/crawldb urls
+```
+

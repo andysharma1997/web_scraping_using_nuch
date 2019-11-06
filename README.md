@@ -55,7 +55,7 @@ mkdir -p urls
 cd urls
 vi seed.txt and add the required url to be searched i'll recomend to just add the base url then rest of the urls in the site can be fetched
 ```
-` Configure Regular Expression Filters
+Configure Regular Expression Filters
 Edit the file conf/regex-urlfilter.txt and replace
 ```
 +^https?://([a-z0-9-]+\.)*xyz\.org/
@@ -63,8 +63,14 @@ Edit the file conf/regex-urlfilter.txt and replace
 add this to the end of file
 
 ## Seeding the crawldb with a list of URLs
-Bootstrapping from an initial seed list.
+### Bootstrapping from an initial seed list.
 ```
 bin/nutch inject crawl/crawldb urls
+```
+#### Fetching
+To fetch, we first generate a fetch list from the database:
+```
+bin/nutch generate crawl/crawldb crawl/segments
+
 ```
 
